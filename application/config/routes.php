@@ -45,6 +45,7 @@ $route['dimina/calcDimino'] = 'dimina/calcDimino';
 $route['dimina/storeDimino'] = 'dimina/storeDimino';
 $route['queries/dapanes'] = 'queries/dapanes';
 $route['queries/sigkentrotikes'] = 'queries/sigkentrotikes';
+$route['queries/anamorfosi'] = 'queries/anamorfosi';
 
 
 /* End of file routes.php */

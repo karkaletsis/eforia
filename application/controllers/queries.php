@@ -34,4 +34,14 @@ class Queries extends CI_Controller {
 	$this->load->view('sigkentrotikes',$data);
 	}	
 	
+	public function anamorfosi()
+	{
+		$this->load->helper('form');
+		$year = $this->input->post('year');
+		if (empty($year)) $year='2011';
+		$data['anamorfosi'] = $this->eforia_model->get_year_anamorfosi($year);
+		$data['exoda_xoris_fpa'] = $this->eforia_model->get_year_outcome_no_fpa($year);
+		$this->load->view('anamorfosi',$data);
+	}
+	
 }	

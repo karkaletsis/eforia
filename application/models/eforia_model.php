@@ -83,6 +83,20 @@ class eforia_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_year_anamorfosi($year)
+	{
+		$sql = "SELECT companies.eponimia as eponimia, outcome.date as date, outcome.amount AS poso1, outcome.fpa AS fpa1, " .
+				"companytype.companytype as companytype, " .
+				"companytype.percentapomeiosi as percentapomeiosi, " .
+				"companytype.inDimini " .
+				"FROM outcome " .
+				"INNER JOIN companies on outcome.companyid=companies.companyid " .
+				"INNER JOIN companytype on companies.companytype=companytype.companytype " .
+				"WHERE companies.companytype=5 and (Year(date)=" . $year . ")";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	
 	public function get_dimina($year)
 	{
 		$sql = "SELECT * from dimina " .

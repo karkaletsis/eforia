@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "datatables";
 $route['404_override'] = '';
 $route['dimina/calc'] = 'dimina/calc';
 $route['dimina/calcDimino'] = 'dimina/calcDimino';

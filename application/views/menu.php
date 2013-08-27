@@ -1,6 +1,11 @@
 <link rel="styleSheet" HREF="<?php echo base_url() . "assets/css/ajax.css"; ?>" TYPE="text/css" MEDIA="screen">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() . "assets/css/main.css"; ?>" />
-
+<?php
+if (!$this->ion_auth->logged_in())
+{
+    redirect('auth/login');
+}
+?>
 <ul>
 <li><a href='<?php echo site_url('datatables/fpa_management')?>'>ΦΠΑ Προηγούμενης</a></li>
 <li><a href='<?php echo site_url('datatables/dimina_2001_management')?>'>Δίμηνα έως 2001 (σε δρχ)</a></li>
@@ -16,4 +21,6 @@
 <li><a href='<?php echo site_url('queries/sigkentrotikes')?>'>Συγκεντρωτικές</a></li>
 <li><a href='<?php echo site_url('queries/anamorfosi')?>'>Αναμόρφωση</a></li>
 <li><a href='<?php echo site_url('queries/dapanes')?>'>Ε3</a></li>
+<li><a href='<?php echo site_url('auth/change_password')?>'>Αλλαγή Κωδικού</a></li>
+<li><a href='<?php echo site_url('auth/logout')?>'>Αποσύνδεση</a></li>
 </ul>

@@ -102,7 +102,7 @@ class Datatables extends CI_Controller {
 			/* This is only for the autocompletion */
 			$crud = new grocery_CRUD();
 
-			$crud->set_theme('datatables');
+			//$crud->set_theme('datatables');
 			$crud->set_table('outcome');
 			$crud->set_subject('ΕΞΟΔΑ');
 			$crud->set_relation('companyid','companies','eponimia');
@@ -127,7 +127,7 @@ class Datatables extends CI_Controller {
 			/* This is only for the autocompletion */
 			$crud = new grocery_CRUD();
 
-			$crud->set_theme('datatables');
+			//$crud->set_theme('datatables');
 			$crud->set_table('income');
 			$crud->set_subject('ΕΣΟΔΑ');
 			$crud->unset_edit_fields('incomeid');
@@ -135,7 +135,7 @@ class Datatables extends CI_Controller {
 			$crud->set_relation('customerid','customers','eponimia');
 			$crud->change_field_type('date', 'date', '$date');
 			$crud->callback_column('total',array($this,'_callback_amount'));
-			$crud->order_by('date','desc');
+			$crud->order_by('Date','desc');
 			$output = $crud->render();
 			
 			$this->_example_output($output);

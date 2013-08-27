@@ -152,7 +152,7 @@ foreach ($fpa as $dimina_item)
 
 </table>
 <hr><hr>
-<h2>ΑΝΑΜΟΡΦΩΤΙΚΗ</h2>
+<h2>ΕΞΟΔΑ ΧΩΡΙΣ ΦΠΑ</h2>
 <h3>ΕΞΟΔΑ ΧΩΡΙΣ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΦΠΑ</h3>
 <table id="table-3">
 <tr>

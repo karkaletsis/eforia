@@ -1,5 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Παρακολούθηση Βιβλίων Β' Κατηγορίας</title>
+
 <link rel="styleSheet" HREF="<?php echo base_url() . "assets/css/ajax.css"; ?>" TYPE="text/css" MEDIA="screen">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . "assets/css/main.css"; ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() . "assets/css/layout.css"; ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() . "assets/css/justifiable/default.css"; ?>" />
+
 <?php
 if (!$this->ion_auth->logged_in())
 {
@@ -21,6 +29,11 @@ if (!$this->ion_auth->logged_in())
 <li><a href='<?php echo site_url('queries/sigkentrotikes')?>'>Συγκεντρωτικές</a></li>
 <li><a href='<?php echo site_url('queries/anamorfosi')?>'>Αναμόρφωση</a></li>
 <li><a href='<?php echo site_url('queries/dapanes')?>'>Ε3</a></li>
+</ul>
+<ul>
 <li><a href='<?php echo site_url('auth/change_password')?>'>Αλλαγή Κωδικού</a></li>
 <li><a href='<?php echo site_url('auth/logout')?>'>Αποσύνδεση</a></li>
 </ul>
+
+</head>
+</html>

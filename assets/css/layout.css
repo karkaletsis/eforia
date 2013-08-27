@@ -1,0 +1,19 @@
+.leftNav
+{
+    width: 20%;
+    height: 100%;
+    float: left;    
+}
+
+.topPanel
+{
+    width: 80%;
+    height: 50%;
+    float: right;
+}
+.bottomPanel
+{
+    width: 80%;
+    height: 50%;
+    float: right;
+}

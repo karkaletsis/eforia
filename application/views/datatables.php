@@ -28,6 +28,7 @@ a:hover
 </style>
 </head>
 <body>
+<h1>Παρακολούθηση Βιβλίων Β' Κατηγορίας</h1>
 <div class="leftNav">       
 <?php include 'menu.php'; ?>
 </div>

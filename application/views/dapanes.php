@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-
+	<title>E3</title>
+<h1>Παρακολούθηση Βιβλίων Β' Κατηγορίας</h1>
+	
 <style type='text/css'>
 body
 {

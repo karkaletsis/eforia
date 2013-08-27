@@ -69,3 +69,23 @@ margin-top: 0;
 	}
 
 .ui-autocomplete-loading { background: white url('../images/ui-anim_basic_16x16.gif') right center no-repeat; }
+
+.leftNav
+{
+    width: 20%;
+    height: 100%;
+    float: left;    
+}
+
+.topPanel
+{
+    width: 80%;
+    height: 50%;
+    float: right;
+}
+.bottomPanel
+{
+    width: 80%;
+    height: 50%;
+    float: right;
+}

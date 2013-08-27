@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Υπολογισμός διμήνου</title>
+	<title>Υπολογισμός Τριμήνου</title>
 </head>
 <body>
 <?php include 'menu.php'; ?>
 <div id="container">
 
-<h3>Υπολογισμός Διμήνου</h3>
+<h3>Υπολογισμός Τριμήνου</h3>
 
 <form method="POST" name="calcDimino" action="calcDimino">
 <table>
 <tr>
-<td>Δίμηνο</td><td><input name="dimino"></td>
+<td>Τρίμηνο</td><td><input name="dimino"></td>
 </tr>
 <tr>
 <td>Έτος</td><td><input name="year"></td>
@@ -32,11 +32,11 @@ echo "<h1>ΤΡΙΜΗΝΟ: " . $dimino . " ΤΟΥ ΕΤΟΥΣ: " . $year . "</h1>"
 ?>
 </div>
 
-<h1>ΕΣΟΔΑ</h1>
+<h2>ΕΣΟΔΑ</h2>
 <table id="table-3">
 <tr>
-	<th>ΚΑΘΑΡΟ</th>
-	<th>ΜΕ ΦΠΑ</th>
+	<th>ΠΟΣΟ ΧΩΡΙΣ ΦΠΑ</th>
+	<th><p align="right">ΦΠΑ</th>
 </tr>
 
 <?php
@@ -54,11 +54,11 @@ foreach ($income as $income_item)
 ?>
 </table>
 
-<h1>ΕΞΟΔΑ</h1>
+<h2>ΕΞΟΔΑ</h2>
 <table id="table-3">
 <tr>
-	<th>ΚΑΘΑΡΟ</th>
-	<th>ΦΠΑ</th>
+	<th>ΠΟΣΟ ΧΩΡΙΣ ΦΠΑ</th>
+	<th><p align="right">ΦΠΑ</th>
 </tr>
 <?php
 $sum2=0;
@@ -75,11 +75,11 @@ foreach ($outcome as $outcome_item)
 ?>
 </table>
 
-<h1>ΕΞΟΔΑ ΧΩΡΙΣ ΦΠΑ</h1>
+<h2>ΕΞΟΔΑ ΧΩΡΙΣ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΦΠΑ </h2>
 <table id="table-3">
 <tr>
-	<th>ΚΑΘΑΡΟ</th>
-	<th>ΦΠΑ</th>
+	<th>ΠΟΣΟ ΜΕ ΦΠΑ</th>
+	<th><p align='right'>ΕΚΠΙΠΤΟΜΕΝΟΣ ΦΠΑ</th>
 </tr>
 <?php
 $sum3=0;
@@ -114,17 +114,16 @@ $fpa_new=$fpa1+$fpa_pr-$fpa2;
 $fpa_1=$fpa_pr;
 $fpa_2=$fpa_new;
 ?>
-
+<h2>ΠΕΡΙΟΔΙΚΗ ΔΗΛΩΣΗ Φ.Π.Α.</h2>
 <table id="table-3">
 <tr>
-	<th>ΣΥΝΟΛΙΚΑ ΕΣΟΔΑ</th>
-	<th>ΣΥΝΟΛΙΚΟ ΦΠΑ ΕΣΟΔΩΝ</th>
-	<th>ΣΥΝΟΛΙΚΑ ΕΞΟΔΑ</th>
-	<th>ΣΥΝΟΛΙΚΟ ΦΠΑ ΕΞΟΔΩΝ</th>
+	<th>ΣΥΝΟΛΙΚΑ ΕΣΟΔΑ ΧΩΡΙΣ ΦΠΑ (303,307)</th>
+	<th>ΣΥΝΟΛΙΚΟ ΦΠΑ ΕΣΟΔΩΝ (333,337)</th>
+	<th>ΣΥΝΟΛΙΚΑ ΕΞΟΔΑ ΧΩΡΙΣ ΦΠΑ (357,358)</th>
+	<th>ΣΥΝΟΛΙΚΟ ΦΠΑ ΕΞΟΔΩΝ (377,378)</th>
 	<th>ΦΠΑ ΠΡΟΗΓΟΥΜΕΝΗΣ</th>
-	<th>ΦΠΑ1</th>
-	<th>ΦΠΑ2</th>
-	<th>EΞΟΔΑ ΧΩΡΙΣ ΦΠΑ</th>
+	<th>ΠΙΣΤΩΤΙΚΟ ΥΠΟΛΟΙΠΟ ΠΡΟΗΓΟΥΜΕΝΗΣ (401,404)</th>
+	<th>ΧΡΕΩΣΤΙΚΟ ΥΠΟΛΟΙΠΟ (511,513 ή(-) 501,502)</th>
 </tr>
 <tr>
 <td><?php echo number_format($sum1, 2, ',', ' '); ?></td>
@@ -134,6 +133,15 @@ $fpa_2=$fpa_new;
 <td><?php echo number_format($fpa, 2, ',', ' '); ?></td>
 <td><?php echo number_format($fpa_1, 2, ',', ' '); ?></td>
 <td><?php echo number_format($fpa_2, 2, ',', ' '); ?></td>
+</tr>
+</table>
+
+<h2>ΣΥΓΚΕΝΤΡΩΤΙΚΗ ΔΗΛΩΣΗ Φ.Π.Α.</h2>
+<table id="table-3">
+<tr>
+<th>ΣΥΝΟΛΙΚΑ EΞΟΔΑ ΧΩΡΙΣ ΕΚΠΙΠΤΟΜΕΝΟ ΦΠΑ</th>
+</tr>
+<tr>
 <td><?php echo number_format($sum3, 2, ',', ' '); ?></td>
 </tr>
 </table>

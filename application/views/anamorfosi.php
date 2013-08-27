@@ -23,8 +23,10 @@ a:hover
 
 </head>
 <body>
-	<?php include 'menu.php'; ?>
-
+<div class="leftNav">       
+<?php include 'menu.php'; ?>
+</div>
+<div class="topPanel">   
 <form method="POST" name="anamorfosi" action="anamorfosi">
 <table>
 <tr>
@@ -103,6 +105,6 @@ $sum_meioumeno_total=$sum_meioumeno1+$sum_meioumeno2;
 <h3>ΑΝΑΜΟΡΦΩΣΗ:<?php echo number_format($sum, 2, ',', ' '); ?></h3>
 <h3>ΑΝΑΜΟΡΦΩΣΗ (MEIOYMENO):<?php echo number_format($sum_meioumeno2, 2, ',', ' '); ?></h3>
 <h3>ΣΥΝΟΛΙΚΟ (MEIOYMENO):<?php echo number_format($sum_meioumeno_total, 2, ',', ' '); ?></h3>
-
+</div>
 </head>
 </html>

@@ -24,8 +24,10 @@ a:hover
 </head>
 <body>
 
+<div class="leftNav">       
 <?php include 'menu.php'; ?>
-
+</div>
+<div class="topPanel"> 
 <form method="POST" name="dapanes" action="dapanes">
 <table>
 <tr>
@@ -86,6 +88,6 @@ foreach ($esoda as $esoda_item)
 ?>
 </table>
 <h3>ΣΥΝΟΛΙΚΑ ΕΣΟΔΑ: <?php echo number_format($sum, 2, ',', ' '); ?></h3>
-
+</div>
 </head>
 </html>

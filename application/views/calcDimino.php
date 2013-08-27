@@ -5,9 +5,10 @@
 	<title>Υπολογισμός Τριμήνου</title>
 </head>
 <body>
+<div class="leftNav">       
 <?php include 'menu.php'; ?>
-<div id="container">
-
+</div>
+<div class="topPanel">   
 <h3>Υπολογισμός Τριμήνου</h3>
 
 <form method="POST" name="calcDimino" action="calcDimino">
@@ -30,7 +31,6 @@ if (!empty($dimino) and !empty($year))
 {
 echo "<h1>ΤΡΙΜΗΝΟ: " . $dimino . " ΤΟΥ ΕΤΟΥΣ: " . $year . "</h1>";
 ?>
-</div>
 
 <h2>ΕΣΟΔΑ</h2>
 <table id="table-3">
@@ -160,5 +160,6 @@ $fpa_2=$fpa_new;
 <input type="submit" value="Υποβολή/Αποθήκευση">
 </form>
 <?php } ?>
+</div>
 </body>
 </html>

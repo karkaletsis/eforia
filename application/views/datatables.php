@@ -28,11 +28,10 @@ a:hover
 </style>
 </head>
 <body>
-	<div>
-	<?php include 'menu.php'; ?>
-	</div>
-	<div style='height:20px;'></div>  
-    <div>
+<div class="leftNav">       
+<?php include 'menu.php'; ?>
+</div>
+<div class="topPanel"> 
 		<?php echo $output; ?>
     </div>
 </body>

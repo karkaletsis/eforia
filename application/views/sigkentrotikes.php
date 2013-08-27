@@ -23,9 +23,10 @@ a:hover
 
 </head>
 <body>
-<hr><hr>
+<div class="leftNav">       
 <?php include 'menu.php'; ?>
-<hr><hr>
+</div>
+<div class="topPanel">   
 <form method="POST" name="sigkentrotikes" action="sigkentrotikes">
 <table>
 <tr>
@@ -180,7 +181,7 @@ foreach ($exoda_xoris_fpa as $transaction_item)
 
 
 <h3>ΣΥΝΟΛΟ ΕΞΟΔΩΝ ΧΩΡΙΣ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΦΠΑ:<?php echo number_format($sum, 2, ',', ' '); ?></h3>
-
+</div>
 
 
 </head>

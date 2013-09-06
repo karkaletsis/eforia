@@ -167,6 +167,7 @@ foreach ($fpa as $dimina_item)
 
 <?php
 $sum=0;
+$sum_apomeiosi=0;
 foreach ($exoda_xoris_fpa as $transaction_item)
 {
 	 echo "<tr>";
@@ -176,13 +177,17 @@ foreach ($exoda_xoris_fpa as $transaction_item)
      echo "<td>" . number_format($transaction_item['percentapomeiosi'], 2, ',', ' ') . "</td>";
      echo "<td>" . number_format($transaction_item['poso1']*(100-$transaction_item['percentapomeiosi'])/100, 2, ',', ' ') . "</td>";
      echo "</tr>";
-    $sum=$sum+$transaction_item['poso1'];
+     $sum=$sum+$transaction_item['poso1'];
+     $sum_apomeiosi=$sum_apomeiosi+$transaction_item['poso1']*(100-$transaction_item['percentapomeiosi'])/100;
+    
 }
 ?>
 </table>
 
 
 <h3>ΣΥΝΟΛΟ ΕΞΟΔΩΝ ΧΩΡΙΣ ΔΙΚΑΙΩΜΑ ΕΚΠΤΩΣΗΣ ΦΠΑ:<?php echo number_format($sum, 2, ',', ' '); ?></h3>
+<h3>ΑΠΟΜΕΙΩΣΗ:<?php echo number_format($sum_apomeiosi, 2, ',', ' '); ?></h3>
+<br>
 </div>
 
 

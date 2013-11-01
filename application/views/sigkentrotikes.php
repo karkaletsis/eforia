@@ -69,6 +69,32 @@ foreach ($esoda as $transaction_item)
 ?>
 </table>
 <h3>Γενικό σύνολο αξίας πωλήσεων: <?php echo number_format($sum, 2, ',', ' '); ?></h3>
+
+<h3>ΠΕΛΑΤΕΣ ΑΛΛΑ</h3>
+<table id="table-3">
+<tr>
+	<th>ΗΜΕΡΟΜΗΝΙΑ</th>
+	<th>ΕΠΩΝΥΜΙΑ</th>
+	<th>ΑΦΜ</th>
+	<th><p align='right'> ΠΟΣΟ ΧΩΡΙΣ ΦΠΑ</th>
+</tr>
+
+<?php
+$sum=0;
+foreach ($esoda_other as $transaction_item)
+{
+	echo "<tr>";
+    echo "<td>" . $this->eforia_model->formatDate($transaction_item['date'],"d-m-Y") . "</td>";
+    echo "<td>" . $transaction_item['eponimia'] . "</td>";
+    echo "<td>" . $transaction_item['afm'] . "</td>";
+    echo "<td align='right'>" . number_format($transaction_item['totalAmount'], 2, ',', ' ') . "</td>";
+    echo "</tr>";
+    $sum=$sum+$transaction_item['totalAmount'];
+}
+?>
+</table>
+<h3>Γενικό σύνολο αξίας πωλήσεων που δεν μπαίνουν στην συγκεντρωτική: <?php echo number_format($sum, 2, ',', ' '); ?></h3>
+
 <h3>ΠΡΟΜΗΘΕΥΤΕΣ</h3>
 <table id="table-3">
 <tr>
@@ -95,6 +121,36 @@ foreach ($exoda as $transaction_item)
 </table>
 
 <h3>Γενικό σύνολο αξίας αγορών: <?php echo number_format($sum, 2, ',', ' '); ?></h3>
+
+<h3>ΠΡΟΜΗΘΕΥΤΕΣ ΑΛΛΑ</h3>
+<table id="table-3">
+<tr>
+	<th>ΗΜΕΡΟΜΗΝΙΑ</th>
+	<th>ΕΠΩΝΥΜΙΑ</th>
+	<th>ΑΦΜ</th>
+	<th><p align='right'> ΠΟΣΟ ΧΩΡΙΣ ΦΠΑ</th>
+</tr>
+
+
+<?php
+$sum=0;
+foreach ($exoda_other as $transaction_item)
+{
+	echo "<tr>";
+    echo "<td>" . $this->eforia_model->formatDate($transaction_item['date'],"d-m-Y") . "</td>";
+    echo "<td>" . $transaction_item['eponimia'] . "</td>";
+    echo "<td>" . $transaction_item['afm'] . "</td>";
+    echo "<td align='right'>" . number_format($transaction_item['totalAmount'], 2, ',', ' ') . "</td>";
+    echo "</tr>";
+    $sum=$sum+$transaction_item['totalAmount'];
+}
+?>
+</table>
+
+<h3>Γενικό σύνολο αξίας αγορών που δεν μπαίνουν στην συγκεντρωτική: <?php echo number_format($sum, 2, ',', ' '); ?></h3>
+
+
+
 <hr><hr>
 <h2><p>ΕΚΚΑΘΑΡΙΣΤΙΚΗ Φ.Π.Α.</h2>
 <h3>ΕΣΟΔΑ - ΕΞΟΔΑ</h3>

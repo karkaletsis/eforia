@@ -16,6 +16,11 @@ class Datatables extends CI_Controller {
 		$this->load->view('datatables.php',$output);	
 	}
 	
+	function test_output()
+	{
+		$this->load->view('test');
+	}
+
 	function offices()
 	{
 		$output = $this->grocery_crud->render();

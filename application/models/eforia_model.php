@@ -128,6 +128,15 @@ class eforia_model extends CI_Model {
 				'WHERE Year(date)=' . $year . ' and income.total>300');
 		return $query->result_array();	
 	}
+
+	public function esoda_sigkentrotikis_alla($year)
+	{
+		$query = $this->db->query('SELECT date, income.total as totalAmount, customers.eponimia,customers.afm FROM income ' .
+				'inner join customers on customers.customerid = income.customerid ' .
+				'WHERE Year(date)=' . $year . ' and income.total<=300');
+		return $query->result_array();
+	}
+	
 	
 	public function exoda_sigkentrotikis($year)
 	{
@@ -137,6 +146,13 @@ class eforia_model extends CI_Model {
 		return $query->result_array();	
 	}	
 	
+	public function exoda_sigkentrotikis_alla($year)
+	{
+		$query = $this->db->query('SELECT date, outcome.amount as totalAmount, companies.eponimia, companies.afm FROM outcome ' .
+				'inner join companies on companies.companyid = outcome.companyid ' .
+				'WHERE Year(date)=' . $year . ' and outcome.amount<=300');
+		return $query->result_array();
+	}
 		public function esoda_sigkentrotikis_fpa($year)
 	{
 		$query = $this->db->query('SELECT date, income.total as totalAmount, customers.eponimia,customers.afm FROM income ' .

@@ -71,7 +71,7 @@ class eforia_model extends CI_Model {
 
 	public function get_year_outcome_no_fpa($year)
 	{
-		$sql = "SELECT companies.eponimia as eponimia, outcome.date as date, outcome.amount AS poso1, outcome.fpa AS fpa1, " .
+		$sql = "SELECT companies.eponimia as eponimia, outcome.date as date, (outcome.amount+outcome.fpa) AS poso1, outcome.fpa AS fpa1, " .
 				"companytype.companytype as companytype, " .
 				"companytype.percentapomeiosi as percentapomeiosi, " .
 				"companytype.inDimini " .

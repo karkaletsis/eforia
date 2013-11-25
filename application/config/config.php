@@ -1,5 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+error_reporting(E_ERROR);
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -360,4 +361,5 @@ $config['proxy_ips'] = '';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+
 
